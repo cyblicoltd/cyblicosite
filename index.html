@@ -6,30 +6,48 @@
   <title>CYBLICO | AI, Cloud & Software Consulting</title>
 
   <!-- SEO -->
-  <meta name="description" content="CYBLICO builds AI-driven software and cloud solutions that simplify complex problems and help businesses move faster." />
+  <meta name="description" content="CYBLICO is an AI-driven software and cloud technology company building intelligent, scalable solutions." />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       color: #111;
       background: #ffffff;
-      line-height: 1.6;
+      line-height: 1.75;
     }
 
+    /* HEADER */
     header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #eee;
+      padding: 20px 64px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 64px;
-      border-bottom: 1px solid #eee;
+      z-index: 100;
     }
 
-    header h1 {
-      font-size: 22px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 32px;
+    }
+
+    .logo span {
+      font-size: 18px;
+      font-weight: 600;
       letter-spacing: 1px;
     }
 
@@ -40,22 +58,30 @@
       font-size: 14px;
     }
 
-    .hero {
+    /* SECTIONS */
+    section {
       padding: 120px 64px;
       max-width: 1100px;
+      margin: auto;
     }
 
-    .hero h2 {
+    h1 {
       font-size: 48px;
       font-weight: 600;
+      letter-spacing: -0.5px;
       max-width: 800px;
     }
 
-    .hero p {
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    p {
       font-size: 18px;
-      max-width: 700px;
-      margin-top: 24px;
       color: #444;
+      max-width: 900px;
     }
 
     .cta {
@@ -63,54 +89,41 @@
     }
 
     .cta a {
-      padding: 14px 28px;
       background: #0f62fe;
       color: #fff;
+      padding: 14px 28px;
+      border-radius: 4px;
       text-decoration: none;
-      border-radius: 6px;
       font-size: 14px;
-    }
-
-    section {
-      padding: 80px 64px;
-      max-width: 1100px;
-    }
-
-    section h3 {
-      font-size: 32px;
-      margin-bottom: 24px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 32px;
+      margin-top: 40px;
     }
 
     .card {
       padding: 24px;
-      border: 1px solid #eee;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
       border-radius: 10px;
     }
 
     footer {
+      background: #f8f9fb;
       padding: 40px 64px;
-      border-top: 1px solid #eee;
       font-size: 14px;
       color: #555;
     }
 
-    footer a {
-      color: #0f62fe;
-      text-decoration: none;
-    }
-
     @media (max-width: 768px) {
-      header, .hero, section, footer {
-        padding: 40px 24px;
+      header, section, footer {
+        padding: 80px 24px;
       }
 
-      .hero h2 {
+      h1 {
         font-size: 34px;
       }
     }
@@ -119,76 +132,103 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>CYBLICO</h1>
-    <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="solution.html">Solutions</a>
-  <a href="#">Insights</a>
-  <a href="#">Careers</a>
-  <a href="contact.html">Contact</a>
-</nav>
-  </header>
-
-  <!-- HERO -->
-  <div class="hero">
-    <h2>AI, Cloud & Software Consulting for a Smarter World</h2>
-    <p>
-      CYBLICO is a technology company building AI-driven software and cloud solutions
-      that close real-world gaps, automate complexity, and help businesses move faster
-      with confidence.
-    </p>
-    <div class="cta">
-      <a href="#">Get in Touch</a>
-    </div>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <!-- Replace logo.png with your actual logo -->
+    <img src="assets/logo.png" alt="Cyblico Logo">
+    <span>CYBLICO</span>
   </div>
 
-  <!-- SOLUTIONS -->
-  <section>
-    <h3>What We Do</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>AI Solutions</h4>
-        <p>Designing intelligent systems that automate workflows, enhance decision-making, and unlock new value.</p>
-      </div>
-      <div class="card">
-        <h4>Cloud Services</h4>
-        <p>Secure, scalable cloud architecture and deployment across modern platforms.</p>
-      </div>
-      <div class="card">
-        <h4>Software Development</h4>
-        <p>Building reliable, high-performance software products using modern technologies.</p>
-      </div>
-      <div class="card">
-        <h4>Technology Consulting</h4>
-        <p>Guiding organizations through digital transformation with clarity and precision.</p>
-      </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#about">About</a>
+    <a href="#insights">Insights</a>
+    <a href="#careers">Careers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <h1>AI, Cloud & Software Consulting for a Smarter World</h1>
+  <p>
+    CYBLICO is a technology company building intelligent software,
+    AI-driven platforms, and cloud solutions that close real-world gaps
+    and help businesses move forward with confidence.
+  </p>
+  <div class="cta">
+    <a href="#contact">Get in Touch</a>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section id="solutions">
+  <h2>Solutions</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>AI Solutions</h3>
+      <p>Intelligent systems and automation designed to simplify complexity and enable smarter operations.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Cloud Engineering</h3>
+      <p>Secure, scalable cloud architecture and modern DevOps practices for long-term growth.</p>
+    </div>
+    <div class="card">
+      <h3>Software Development</h3>
+      <p>High-quality software platforms built with modern engineering and performance in mind.</p>
+    </div>
+    <div class="card">
+      <h3>Technology Consulting</h3>
+      <p>Strategic guidance to help organizations adopt AI, cloud, and modern software confidently.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section>
-    <h3>Our Belief</h3>
-    <p>
-      Every problem in today’s world has a gap waiting to be solved.  
-      At CYBLICO, we believe technology—when built with purpose—can reduce complexity,
-      create efficiency, and transform how people work.
-      <br><br>
-      A strong team builds strong solutions.  
-      Strong solutions create real progress.
-    </p>
-  </section>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About CYBLICO</h2>
+  <p>
+    In today’s fast-evolving world, every challenge presents an opportunity.
+    CYBLICO exists to fill the gaps between complex problems and intelligent solutions
+    using AI, cloud platforms, and modern software engineering.
+    <br><br>
+    We believe strong teams build strong solutions—and strong solutions drive real progress.
+  </p>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      © 2026 CYBLICO LTD · AI, Cloud & Software Consulting  
-      <br>
-      <a href="https://www.cyblico.com">www.cyblico.com</a>
-    </p>
-  </footer>
+<!-- INSIGHTS -->
+<section id="insights">
+  <h2>Insights</h2>
+  <p>
+    Perspectives on AI, cloud technologies, automation, and the future of software engineering.
+    We share ideas that shape intelligent systems and responsible innovation.
+  </p>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <h2>Careers</h2>
+  <p>
+    CYBLICO is remote-first and impact-driven.
+    We welcome engineers, thinkers, and builders who want to shape the future of technology.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    📧 contact@cyblico.com<br>
+    🌍 Remote-first · Global delivery
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 CYBLICO LTD · AI, Cloud & Software Consulting · www.cyblico.com
+</footer>
 
 </body>
 </html>
