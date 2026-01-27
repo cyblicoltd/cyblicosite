@@ -1,134 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cyblico | AI, Cloud & Software Consulting</title>
-  <meta name="description" content="Cyblico is an AI-driven software and cloud technology company building intelligent, scalable digital solutions."/>
+  <title>CYBLICO | AI, Cloud & Software Consulting</title>
+
+  <!-- SEO -->
+  <meta name="description" content="CYBLICO builds AI-driven software and cloud solutions that simplify complex problems and help businesses move faster." />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #0b0f19;
-      color: #ffffff;
+      color: #111;
+      background: #ffffff;
+      line-height: 1.6;
     }
-    a { color: #4da3ff; text-decoration: none; }
+
     header {
-      padding: 80px 20px;
-      text-align: center;
-      background: radial-gradient(circle at top, #1a1f36, #0b0f19);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 64px;
+      border-bottom: 1px solid #eee;
     }
+
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 22px;
       letter-spacing: 1px;
     }
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: #cfd6ff;
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
     }
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
-      background: #4da3ff;
-      color: #000;
-      font-weight: 600;
-    }
-    section {
-      padding: 70px 20px;
+
+    .hero {
+      padding: 120px 64px;
       max-width: 1100px;
-      margin: auto;
     }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 600;
+      max-width: 800px;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin-top: 24px;
+      color: #444;
+    }
+
+    .cta {
       margin-top: 40px;
     }
+
+    .cta a {
+      padding: 14px 28px;
+      background: #0f62fe;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 80px 64px;
+      max-width: 1100px;
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+    }
+
     .card {
-      background: #141a2e;
-      padding: 30px;
-      border-radius: 16px;
-      border: 1px solid #1f2642;
+      padding: 24px;
+      border: 1px solid #eee;
+      border-radius: 10px;
     }
-    .card h3 {
-      margin-top: 0;
-      color: #4da3ff;
-    }
+
     footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #070a14;
-      color: #8a90c5;
-      font-size: 0.9rem;
+      padding: 40px 64px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer a {
+      color: #0f62fe;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header, .hero, section, footer {
+        padding: 40px 24px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>CYBLICO</h1>
-  <p>AI, Cloud & Software Consulting</p>
-  <p>
-    We build intelligent software products and deliver AI-driven, cloud-native solutions
-    that help businesses transform, scale, and operate smarter.
-  </p>
-  <a class="btn" href="#services">Explore Our Services</a>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>CYBLICO</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Solutions</a>
+      <a href="#">About</a>
+      <a href="#">Insights</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Who We Are</h2>
-  <p style="text-align:center; max-width:800px; margin:auto; color:#cfd6ff;">
-    Cyblico is a technology company focused on creating modern software systems powered by
-    artificial intelligence and cloud platforms. We design, develop, and modernize digital
-    solutions that reduce complexity and prepare organizations for the future.
-  </p>
-</section>
-
-<section id="services">
-  <h2>What We Do</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>AI Solutions</h3>
-      <p>AI-powered platforms, automation systems, and intelligent software built to solve real-world problems.</p>
-    </div>
-    <div class="card">
-      <h3>Software Development</h3>
-      <p>Custom web applications, scalable backend systems, APIs, and modern product engineering.</p>
-    </div>
-    <div class="card">
-      <h3>Cloud Engineering</h3>
-      <p>Cloud-native architecture, DevOps, deployment, and scalable infrastructure on modern cloud platforms.</p>
-    </div>
-    <div class="card">
-      <h3>Technology Consulting</h3>
-      <p>Strategic guidance, system architecture, and transformation consulting for AI and cloud adoption.</p>
+  <!-- HERO -->
+  <div class="hero">
+    <h2>AI, Cloud & Software Consulting for a Smarter World</h2>
+    <p>
+      CYBLICO is a technology company building AI-driven software and cloud solutions
+      that close real-world gaps, automate complexity, and help businesses move faster
+      with confidence.
+    </p>
+    <div class="cta">
+      <a href="#">Get in Touch</a>
     </div>
   </div>
-</section>
 
-<section>
-  <h2>Our Vision</h2>
-  <p style="text-align:center; max-width:800px; margin:auto; color:#cfd6ff;">
-    We believe the future belongs to AI-first, cloud-native systems.
-    Our mission is to build technology that simplifies work, accelerates innovation,
-    and creates lasting impact through intelligent design and engineering excellence.
-  </p>
-</section>
+  <!-- SOLUTIONS -->
+  <section>
+    <h3>What We Do</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>AI Solutions</h4>
+        <p>Designing intelligent systems that automate workflows, enhance decision-making, and unlock new value.</p>
+      </div>
+      <div class="card">
+        <h4>Cloud Services</h4>
+        <p>Secure, scalable cloud architecture and deployment across modern platforms.</p>
+      </div>
+      <div class="card">
+        <h4>Software Development</h4>
+        <p>Building reliable, high-performance software products using modern technologies.</p>
+      </div>
+      <div class="card">
+        <h4>Technology Consulting</h4>
+        <p>Guiding organizations through digital transformation with clarity and precision.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2026 Cyblico Ltd · UK Registered · Remote-First · www.cyblico.com
-</footer>
+  <!-- ABOUT -->
+  <section>
+    <h3>Our Belief</h3>
+    <p>
+      Every problem in today’s world has a gap waiting to be solved.  
+      At CYBLICO, we believe technology—when built with purpose—can reduce complexity,
+      create efficiency, and transform how people work.
+      <br><br>
+      A strong team builds strong solutions.  
+      Strong solutions create real progress.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 CYBLICO LTD · AI, Cloud & Software Consulting  
+      <br>
+      <a href="https://www.cyblico.com">www.cyblico.com</a>
+    </p>
+  </footer>
 
 </body>
 </html>
