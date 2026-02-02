@@ -3,34 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/jpg" href="assets/favicon.jpg">
-
-  <title>CYBLICO | AI, Cloud & Software Consulting</title>
+  <title>CYBLICO | AI-First Cloud & Platform Engineering</title>
 
   <!-- SEO -->
-  <meta name="description" content="CYBLICO is an AI-driven software and cloud technology company building intelligent, scalable solutions." />
+  <meta name="description" content="CYBLICO is an AI-first consulting and engineering company delivering intelligent cloud, data, and software platforms." />
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --primary: #0f62fe;
+      --text-dark: #0b0b0b;
+      --text-muted: #555;
+      --bg-light: #f7f9fc;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      color: #111;
-      background: #ffffff;
-      line-height: 1.75;
+      color: var(--text-dark);
+      background: #fff;
+      line-height: 1.7;
     }
 
     /* HEADER */
     header {
       position: sticky;
       top: 0;
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
-      padding: 20px 64px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 72px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -38,86 +46,115 @@
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      height: 32px;
-    }
-
-    .logo span {
-      font-size: 18px;
       font-weight: 600;
       letter-spacing: 1px;
+      font-size: 18px;
     }
 
     nav a {
-      margin-left: 24px;
+      margin-left: 28px;
       text-decoration: none;
-      color: #111;
       font-size: 14px;
+      color: var(--text-dark);
     }
 
     /* SECTIONS */
     section {
-      padding: 120px 64px;
-      max-width: 1100px;
+      padding: 120px 72px;
+      max-width: 1280px;
       margin: auto;
     }
 
+    section.light {
+      background: var(--bg-light);
+    }
+
     h1 {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 600;
-      letter-spacing: -0.5px;
-      max-width: 800px;
+      letter-spacing: -1px;
+      max-width: 900px;
+      margin-bottom: 24px;
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 600;
       margin-bottom: 20px;
     }
 
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
     p {
       font-size: 18px;
-      color: #444;
+      color: var(--text-muted);
       max-width: 900px;
     }
 
     .cta {
       margin-top: 40px;
+      display: flex;
+      gap: 16px;
     }
 
-    .cta a {
-      background: #0f62fe;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 4px;
-      text-decoration: none;
+    .btn {
+      padding: 14px 30px;
       font-size: 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 1px solid var(--primary);
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn.secondary {
+      color: var(--primary);
+      background: transparent;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 32px;
-      margin-top: 40px;
+      margin-top: 48px;
     }
 
     .card {
-      padding: 24px;
-      background: #ffffff;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      background: #fff;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .tech {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .tech div {
+      padding: 20px;
+      border: 1px solid var(--border);
       border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      background: #fff;
     }
 
     footer {
-      background: #f8f9fb;
-      padding: 40px 64px;
+      background: #f1f3f6;
+      padding: 48px 72px;
       font-size: 14px;
-      color: #555;
+      color: #666;
     }
 
     @media (max-width: 768px) {
@@ -126,7 +163,7 @@
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 38px;
       }
     }
   </style>
@@ -136,15 +173,10 @@
 
 <!-- HEADER -->
 <header>
-  <div class="logo">
-    <!-- Replace logo.png with your actual logo -->
-    <img src="assets/logo.jpg" alt="Cyblico Logo">
-    <span>CYBLICO</span>
-  </div>
-
+  <div class="logo">CYBLICO</div>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#solutions">Solutions</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#technology">Technology</a>
     <a href="#about">About</a>
     <a href="#insights">Insights</a>
     <a href="#careers">Careers</a>
@@ -152,69 +184,83 @@
   </nav>
 </header>
 
-<!-- HOME -->
-<section id="home">
-  <h1>AI, Cloud & Software Consulting for a Smarter World</h1>
+<!-- HERO -->
+<section>
+  <h1>Engineering AI-First Platforms for the Cloud Era</h1>
   <p>
-    CYBLICO is a technology company building intelligent software,
-    AI-driven platforms, and cloud solutions that close real-world gaps
-    and help businesses move forward with confidence.
+    CYBLICO is an AI-native consulting and engineering company helping organizations
+    design, build, and scale intelligent systems across cloud, data, and software platforms.
   </p>
   <div class="cta">
-    <a href="#contact">Get in Touch</a>
+    <a href="#contact" class="btn primary">Talk to an Architect</a>
+    <a href="#capabilities" class="btn secondary">Explore Capabilities</a>
   </div>
 </section>
 
-<!-- SOLUTIONS -->
-<section id="solutions">
-  <h2>Solutions</h2>
+<!-- CAPABILITIES -->
+<section id="capabilities" class="light">
+  <h2>Capabilities</h2>
   <div class="grid">
     <div class="card">
-      <h3>AI Solutions</h3>
-      <p>Intelligent systems and automation designed to simplify complexity and enable smarter operations.</p>
+      <h3>AI & Intelligent Systems</h3>
+      <p>Applied AI, automation, and decision intelligence embedded into real-world workflows.</p>
     </div>
     <div class="card">
-      <h3>Cloud Engineering</h3>
-      <p>Secure, scalable cloud architecture and modern DevOps practices for long-term growth.</p>
+      <h3>Cloud & Platform Engineering</h3>
+      <p>Secure, scalable cloud architectures across AWS, Azure, and hybrid environments.</p>
     </div>
     <div class="card">
-      <h3>Software Development</h3>
-      <p>High-quality software platforms built with modern engineering and performance in mind.</p>
+      <h3>Data, MLOps & Observability</h3>
+      <p>Production-grade data pipelines, model lifecycle management, and system visibility.</p>
     </div>
     <div class="card">
-      <h3>Technology Consulting</h3>
-      <p>Strategic guidance to help organizations adopt AI, cloud, and modern software confidently.</p>
+      <h3>Digital & Software Engineering</h3>
+      <p>Cloud-native applications built for scale, resilience, and performance.</p>
     </div>
+    <div class="card">
+      <h3>Advisory & Transformation</h3>
+      <p>AI readiness, architecture reviews, and enterprise platform modernization.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+  <h2>Browse by Technology</h2>
+  <div class="tech">
+    <div>AI & Machine Learning</div>
+    <div>Cloud & DevOps</div>
+    <div>Data Platforms</div>
+    <div>Security & Zero Trust</div>
+    <div>Platform Engineering</div>
+    <div>Observability</div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="light">
   <h2>About CYBLICO</h2>
   <p>
-    In today’s fast-evolving world, every challenge presents an opportunity.
-    CYBLICO exists to fill the gaps between complex problems and intelligent solutions
-    using AI, cloud platforms, and modern software engineering.
-    <br><br>
-    We believe strong teams build strong solutions—and strong solutions drive real progress.
+    CYBLICO was founded to close the gap between experimental AI and production-grade systems.
+    We operate at the intersection of AI, cloud platforms, and modern engineering to turn ideas
+    into secure, scalable, real-world impact.
   </p>
 </section>
 
 <!-- INSIGHTS -->
 <section id="insights">
-  <h2>Insights</h2>
+  <h2>Research & Perspectives</h2>
   <p>
-    Perspectives on AI, cloud technologies, automation, and the future of software engineering.
-    We share ideas that shape intelligent systems and responsible innovation.
+    Frameworks, insights, and engineering perspectives on building responsible,
+    scalable AI and cloud platforms.
   </p>
 </section>
 
 <!-- CAREERS -->
-<section id="careers">
+<section id="careers" class="light">
   <h2>Careers</h2>
   <p>
-    CYBLICO is remote-first and impact-driven.
-    We welcome engineers, thinkers, and builders who want to shape the future of technology.
+    We hire builders, not titles. Remote-first. Impact-driven. AI-native.
   </p>
 </section>
 
@@ -229,7 +275,7 @@
 
 <!-- FOOTER -->
 <footer>
-  © 2026 CYBLICO LTD · AI, Cloud & Software Consulting · www.cyblico.com
+  © 2026 CYBLICO LTD · AI-First Cloud & Platform Engineering
 </footer>
 
 </body>
