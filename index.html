@@ -1,195 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CYBLICO | AI-First Cloud & Platform Engineering</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CYBLICO | AI-First Cloud & Platform Engineering</title>
 
-  <!-- SEO -->
-  <meta name="description" content="CYBLICO is an AI-first consulting and engineering company delivering intelligent cloud, data, and software platforms." />
+<meta name="description" content="CYBLICO is an AI-first consulting and engineering company building production-grade cloud, data, and intelligent platforms." />
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary: #0f62fe;
-      --text-dark: #0b0b0b;
-      --text-muted: #555;
-      --bg-light: #f7f9fc;
-      --border: #e5e7eb;
-    }
+<style>
+/* ======================
+   DESIGN SYSTEM (V6)
+====================== */
+:root {
+  --primary: #0f62fe;
+  --bg: #ffffff;
+  --bg-alt: #f6f8fc;
+  --text: #0b0b0b;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --transition: 0.25s ease;
+}
 
-    * { box-sizing: border-box; }
+[data-theme="dark"] {
+  --bg: #0a0f1c;
+  --bg-alt: #111827;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
 
-    html { scroll-behavior: smooth; }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: #fff;
-      line-height: 1.7;
-    }
+html { scroll-behavior: smooth; }
 
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 20px 72px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background var(--transition), color var(--transition);
+}
 
-    .logo {
-      font-weight: 600;
-      letter-spacing: 1px;
-      font-size: 18px;
-    }
+/* ======================
+   HEADER
+====================== */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
 
-    nav a {
-      margin-left: 28px;
-      text-decoration: none;
-      font-size: 14px;
-      color: var(--text-dark);
-    }
+[data-theme="dark"] header {
+  background: rgba(10,15,28,0.85);
+}
 
-    /* SECTIONS */
-    section {
-      padding: 120px 72px;
-      max-width: 1280px;
-      margin: auto;
-    }
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
-    section.light {
-      background: var(--bg-light);
-    }
+nav a {
+  margin-left: 28px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text);
+}
 
-    h1 {
-      font-size: 56px;
-      font-weight: 600;
-      letter-spacing: -1px;
-      max-width: 900px;
-      margin-bottom: 24px;
-    }
+/* ======================
+   GLOBAL SECTIONS
+====================== */
+section {
+  padding: 120px 72px;
+  max-width: 1280px;
+  margin: auto;
+}
 
-    h2 {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+section.alt { background: var(--bg-alt); }
 
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+h1 {
+  font-size: 56px;
+  letter-spacing: -1px;
+}
 
-    p {
-      font-size: 18px;
-      color: var(--text-muted);
-      max-width: 900px;
-    }
+h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
 
-    .cta {
-      margin-top: 40px;
-      display: flex;
-      gap: 16px;
-    }
+p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 900px;
+}
 
-    .btn {
-      padding: 14px 30px;
-      font-size: 14px;
-      text-decoration: none;
-      border-radius: 6px;
-      border: 1px solid var(--primary);
-    }
+/* ======================
+   HERO
+====================== */
+.hero {
+  background: radial-gradient(circle at top right, #1a2b6f, #0a0f1c);
+  color: #fff;
+}
 
-    .btn.primary {
-      background: var(--primary);
-      color: #fff;
-    }
+.hero p { color: #c7d2fe; }
 
-    .btn.secondary {
-      color: var(--primary);
-      background: transparent;
-    }
+/* ======================
+   BUTTONS
+====================== */
+.cta {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      margin-top: 48px;
-    }
+.btn {
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  transition: var(--transition);
+}
 
-    .card {
-      background: #fff;
-      padding: 32px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
 
-    .tech {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
+.btn.secondary {
+  color: var(--primary);
+}
 
-    .tech div {
-      padding: 20px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 500;
-      text-align: center;
-      background: #fff;
-    }
+.btn:hover { transform: translateY(-2px); }
 
-    footer {
-      background: #f1f3f6;
-      padding: 48px 72px;
-      font-size: 14px;
-      color: #666;
-    }
+/* ======================
+   GRID / CARDS
+====================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
 
-    @media (max-width: 768px) {
-      header, section, footer {
-        padding: 80px 24px;
-      }
+.card {
+  padding: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  transition: var(--transition);
+}
 
-      h1 {
-        font-size: 38px;
-      }
-    }
-  </style>
+.card:hover { transform: translateY(-4px); }
+
+/* ======================
+   TECH PILLS
+====================== */
+.tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.tech div {
+  padding: 22px;
+  text-align: center;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+  padding: 60px 72px;
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--bg-alt);
+}
+
+/* ======================
+   DARK MODE TOGGLE
+====================== */
+.toggle {
+  cursor: pointer;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+/* ======================
+   MOBILE
+====================== */
+@media (max-width: 768px) {
+  header, section, footer { padding: 80px 24px; }
+  h1 { font-size: 38px; }
+}
+</style>
 </head>
 
-<body>
+<body data-theme="light">
 
-<!-- HEADER -->
 <header>
   <div class="logo">CYBLICO</div>
   <nav>
     <a href="#capabilities">Capabilities</a>
     <a href="#technology">Technology</a>
     <a href="#about">About</a>
-    <a href="#insights">Insights</a>
-    <a href="#careers">Careers</a>
     <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleTheme()">Dark</span>
   </nav>
 </header>
 
-<!-- HERO -->
-<section>
+<section class="hero">
   <h1>Engineering AI-First Platforms for the Cloud Era</h1>
   <p>
-    CYBLICO is an AI-native consulting and engineering company helping organizations
-    design, build, and scale intelligent systems across cloud, data, and software platforms.
+    CYBLICO designs, builds, and scales production-grade AI, cloud,
+    and software platforms for organizations entering the intelligent systems era.
   </p>
   <div class="cta">
     <a href="#contact" class="btn primary">Talk to an Architect</a>
@@ -197,74 +236,37 @@
   </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section id="capabilities" class="light">
+<section id="capabilities" class="alt">
   <h2>Capabilities</h2>
   <div class="grid">
-    <div class="card">
-      <h3>AI & Intelligent Systems</h3>
-      <p>Applied AI, automation, and decision intelligence embedded into real-world workflows.</p>
-    </div>
-    <div class="card">
-      <h3>Cloud & Platform Engineering</h3>
-      <p>Secure, scalable cloud architectures across AWS, Azure, and hybrid environments.</p>
-    </div>
-    <div class="card">
-      <h3>Data, MLOps & Observability</h3>
-      <p>Production-grade data pipelines, model lifecycle management, and system visibility.</p>
-    </div>
-    <div class="card">
-      <h3>Digital & Software Engineering</h3>
-      <p>Cloud-native applications built for scale, resilience, and performance.</p>
-    </div>
-    <div class="card">
-      <h3>Advisory & Transformation</h3>
-      <p>AI readiness, architecture reviews, and enterprise platform modernization.</p>
-    </div>
+    <div class="card"><h3>AI & Intelligent Systems</h3><p>Applied AI embedded into core business workflows.</p></div>
+    <div class="card"><h3>Cloud & Platform Engineering</h3><p>Secure, scalable cloud-native architectures.</p></div>
+    <div class="card"><h3>Data, MLOps & Observability</h3><p>From data pipelines to production AI systems.</p></div>
+    <div class="card"><h3>Digital Engineering</h3><p>High-performance cloud-native applications.</p></div>
+    <div class="card"><h3>Advisory & Transformation</h3><p>AI readiness, architecture, and modernization.</p></div>
   </div>
 </section>
 
-<!-- TECHNOLOGY -->
 <section id="technology">
-  <h2>Browse by Technology</h2>
+  <h2>Technology Domains</h2>
   <div class="tech">
-    <div>AI & Machine Learning</div>
+    <div>AI & ML</div>
     <div>Cloud & DevOps</div>
     <div>Data Platforms</div>
-    <div>Security & Zero Trust</div>
+    <div>Security</div>
     <div>Platform Engineering</div>
     <div>Observability</div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="light">
+<section id="about" class="alt">
   <h2>About CYBLICO</h2>
   <p>
-    CYBLICO was founded to close the gap between experimental AI and production-grade systems.
-    We operate at the intersection of AI, cloud platforms, and modern engineering to turn ideas
-    into secure, scalable, real-world impact.
+    CYBLICO bridges the gap between AI experimentation and real-world systems.
+    We combine deep engineering with strategic clarity to operationalise intelligence at scale.
   </p>
 </section>
 
-<!-- INSIGHTS -->
-<section id="insights">
-  <h2>Research & Perspectives</h2>
-  <p>
-    Frameworks, insights, and engineering perspectives on building responsible,
-    scalable AI and cloud platforms.
-  </p>
-</section>
-
-<!-- CAREERS -->
-<section id="careers" class="light">
-  <h2>Careers</h2>
-  <p>
-    We hire builders, not titles. Remote-first. Impact-driven. AI-native.
-  </p>
-</section>
-
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <p>
@@ -273,10 +275,16 @@
   </p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 CYBLICO LTD · AI-First Cloud & Platform Engineering
 </footer>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  body.dataset.theme = body.dataset.theme === "dark" ? "light" : "dark";
+}
+</script>
 
 </body>
 </html>
