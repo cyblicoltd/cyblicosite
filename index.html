@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>CYBLICO | Global AI & Cloud Engineering Company</title>
-
 <link rel="icon" type="image/jpg" href="assets/favicon.jpg">
 
 <meta name="description" content="CYBLICO is a global AI-first consulting company delivering cloud, data, and intelligent platforms worldwide." />
@@ -34,11 +33,11 @@ body {
   line-height: 1.7;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
   position: sticky;
   top: 0;
-  background: rgba(10,15,28,0.9);
+  background: rgba(10,15,28,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 18px 72px;
@@ -55,8 +54,19 @@ header {
   color: #ffffff;
 }
 
+nav a,
+nav a:visited {
+  margin-left: 28px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+}
 
-/* SECTIONS */
+nav a:hover {
+  color: var(--primary);
+}
+
+/* ================= SECTIONS ================= */
 section {
   padding: 120px 72px;
   max-width: 1280px;
@@ -70,12 +80,25 @@ h2 { font-size: 36px; margin-bottom: 16px; }
 h3 { font-size: 18px; }
 p { font-size: 18px; color: var(--muted); max-width: 900px; }
 
-/* HERO */
+/* ================= HERO (FULL BLEED) ================= */
 .hero {
-  background: radial-gradient(circle at top right, #1f3b8f, #0a0f1c);
+  width: 100%;
+  max-width: none;
+  background: linear-gradient(
+    180deg,
+    #070b16 0%,
+    #0a0f1c 30%,
+    #1f3b8f 100%
+  );
 }
 
-/* CTA */
+.hero-inner {
+  max-width: 1280px;
+  margin: auto;
+  padding: 160px 72px;
+}
+
+/* ================= CTA ================= */
 .cta {
   margin-top: 40px;
   display: flex;
@@ -93,7 +116,7 @@ p { font-size: 18px; color: var(--muted); max-width: 900px; }
 .btn.primary { background: var(--primary); color: #fff; }
 .btn.secondary { color: var(--primary); }
 
-/* GRID */
+/* ================= GRID ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -108,7 +131,7 @@ p { font-size: 18px; color: var(--muted); max-width: 900px; }
   background: #0b1224;
 }
 
-/* QUOTES */
+/* ================= QUOTES ================= */
 .quote {
   font-size: 20px;
   font-weight: 500;
@@ -119,7 +142,7 @@ p { font-size: 18px; color: var(--muted); max-width: 900px; }
   margin-top: 32px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   background: #070b16;
   padding: 80px 72px;
@@ -133,11 +156,13 @@ footer {
 }
 
 footer h4 { margin-bottom: 12px; }
-footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
+footer p { color: #9ca3af; font-size: 14px; }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  header, section, footer { padding: 80px 24px; }
+  header { padding: 18px 24px; }
+  section { padding: 80px 24px; }
+  .hero-inner { padding: 120px 24px; }
   h1 { font-size: 38px; }
 }
 </style>
@@ -147,7 +172,6 @@ footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
 
 <header>
   <div class="logo-text">CYBLICO</div>
-
   <nav>
     <a href="#capabilities">Capabilities</a>
     <a href="#global">Global</a>
@@ -156,15 +180,18 @@ footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Engineering AI-First Platforms for a Global World</h1>
-  <p>
-    CYBLICO is a global AI and cloud engineering company helping organizations
-    design, build, and scale intelligent systems—securely and responsibly.
-  </p>
-  <div class="cta">
-    <a href="#contact" class="btn primary">Engage with CYBLICO</a>
-    <a href="#capabilities" class="btn secondary">Explore Capabilities</a>
+  <div class="hero-inner">
+    <h1>Engineering AI-First Platforms for a Global World</h1>
+    <p>
+      CYBLICO is a global AI and cloud engineering company helping organizations
+      design, build, and scale intelligent systems—securely and responsibly.
+    </p>
+    <div class="cta">
+      <a href="#contact" class="btn primary">Engage with CYBLICO</a>
+      <a href="#capabilities" class="btn secondary">Explore Capabilities</a>
+    </div>
   </div>
 </section>
 
@@ -182,10 +209,8 @@ footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
   <h2>Global Presence</h2>
   <p>
     Our clients operate across <strong>Dubai, India, USA, United Kingdom,
-    Australia, and Canada</strong>.  
-    CYBLICO delivers AI and cloud solutions globally—without borders.
+    Australia, and Canada</strong>.
   </p>
-
   <div class="quote">
     “Our mission is simple: make AI accessible, responsible, and impactful
     for organizations everywhere.”
@@ -195,13 +220,11 @@ footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
 <section id="about" class="alt">
   <h2>More Than Systems. A Brand Built on Trust.</h2>
   <p>
-    CYBLICO is not just a technology provider.  
-    We build long-term partnerships, loyalty, and trust by engineering systems
-    that organizations can rely on for years—not quarters.
+    CYBLICO builds long-term partnerships by engineering systems organizations
+    can rely on for years—not quarters.
   </p>
-
   <div class="quote">
-    “Technology changes fast. Trust is built slowly. We focus on both.”
+    “Technology changes fast. Trust is built slowly.”
   </div>
 </section>
 
@@ -210,7 +233,7 @@ footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
   <p>
     📧 cyblicoltd@gmail.com<br>
     📍 England, United Kingdom<br>
-    🌍 Global delivery · Remote-first operations
+    🌍 Global delivery · Remote-first
   </p>
 </section>
 
@@ -218,15 +241,11 @@ footer p, footer a { color: #9ca3af; font-size: 14px; text-decoration: none; }
   <div class="footer-grid">
     <div>
       <h4>CYBLICO</h4>
-      <p>AI-First Cloud & Platform Engineering Company</p>
+      <p>AI-First Cloud & Platform Engineering</p>
     </div>
     <div>
       <h4>Global Reach</h4>
       <p>UK · USA · India · Dubai · Australia · Canada</p>
-    </div>
-    <div>
-      <h4>Focus Areas</h4>
-      <p>AI · Cloud · Data · Security · Platforms</p>
     </div>
     <div>
       <h4>© 2026</h4>
