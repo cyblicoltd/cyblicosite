@@ -4,10 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>CYBLICO | Global AI & Cloud Engineering Company</title>
-<link rel="icon" type="image/jpg" href="assets/favicon.jpg">
-
-<meta name="description" content="CYBLICO is a global AI-first consulting company delivering cloud, data, and intelligent platforms worldwide." />
+<title>CYBLICO | AI Automation & Intelligent Systems for Growing Businesses</title>
+<meta name="description" content="CYBLICO builds AI automation systems for startups and mid-sized businesses. Reduce manual workflows. Improve operational speed. Deploy scalable intelligent systems." />
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -23,8 +21,6 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -33,72 +29,49 @@ body {
   line-height: 1.7;
 }
 
-/* ================= HEADER ================= */
 header {
   position: sticky;
   top: 0;
   background: rgba(10,15,28,0.95);
-  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 18px 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 }
 
 .logo-text {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #ffffff;
 }
 
-nav a,
-nav a:visited {
+nav a {
   margin-left: 28px;
   font-size: 14px;
   text-decoration: none;
   color: #ffffff;
 }
 
-nav a:hover {
-  color: var(--primary);
-}
+nav a:hover { color: var(--primary); }
 
-/* ================= SECTIONS ================= */
 section {
-  padding: 120px 72px;
-  max-width: 1280px;
+  padding: 100px 72px;
+  max-width: 1200px;
   margin: auto;
 }
 
 section.alt { background: var(--bg-alt); }
 
-h1 { font-size: 56px; letter-spacing: -1px; }
-h2 { font-size: 36px; margin-bottom: 16px; }
+h1 { font-size: 48px; }
+h2 { font-size: 32px; margin-bottom: 16px; }
 h3 { font-size: 18px; }
-p { font-size: 18px; color: var(--muted); max-width: 900px; }
+p { color: var(--muted); max-width: 850px; }
 
-/* ================= HERO (FULL BLEED) ================= */
 .hero {
-  width: 100%;
-  max-width: none;
-  background: linear-gradient(
-    180deg,
-    #070b16 0%,
-    #0a0f1c 30%,
-    #1f3b8f 100%
-  );
+  background: linear-gradient(180deg,#070b16 0%,#0a0f1c 60%,#1f3b8f 100%);
 }
 
-.hero-inner {
-  max-width: 1280px;
-  margin: auto;
-  padding: 160px 72px;
-}
-
-/* ================= CTA ================= */
 .cta {
   margin-top: 40px;
   display: flex;
@@ -106,64 +79,49 @@ p { font-size: 18px; color: var(--muted); max-width: 900px; }
 }
 
 .btn {
-  padding: 14px 32px;
+  padding: 14px 28px;
   border-radius: var(--radius);
   font-size: 14px;
   text-decoration: none;
   border: 1px solid var(--primary);
 }
 
-.btn.primary { background: var(--primary); color: #fff; }
-.btn.secondary { color: var(--primary); }
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
 
-/* ================= GRID ================= */
+.btn.secondary {
+  color: var(--primary);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-  margin-top: 48px;
+  gap: 28px;
+  margin-top: 40px;
 }
 
 .card {
-  padding: 36px;
+  padding: 32px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: #0b1224;
 }
 
-/* ================= QUOTES ================= */
-.quote {
-  font-size: 20px;
-  font-weight: 500;
-  color: #e5e7eb;
-  max-width: 900px;
-  border-left: 4px solid var(--primary);
-  padding-left: 24px;
-  margin-top: 32px;
-}
-
-/* ================= FOOTER ================= */
 footer {
   background: #070b16;
-  padding: 80px 72px;
+  padding: 60px 72px;
   border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 40px;
-}
-
-footer h4 { margin-bottom: 12px; }
-footer p { color: #9ca3af; font-size: 14px; }
-
-/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   header { padding: 18px 24px; }
-  section { padding: 80px 24px; }
-  .hero-inner { padding: 120px 24px; }
-  h1 { font-size: 38px; }
+  section { padding: 70px 24px; }
+  h1 { font-size: 34px; }
 }
 </style>
 </head>
@@ -173,85 +131,95 @@ footer p { color: #9ca3af; font-size: 14px; }
 <header>
   <div class="logo-text">CYBLICO</div>
   <nav>
-    <a href="#capabilities">Capabilities</a>
-    <a href="#global">Global</a>
-    <a href="#about">About</a>
+    <a href="#problems">Problems</a>
+    <a href="#services">Solutions</a>
+    <a href="#process">Process</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <h1>Engineering AI-First Platforms for a Global World</h1>
-    <p>
-      CYBLICO is a global AI and cloud engineering company helping organizations
-      design, build, and scale intelligent systems—securely and responsibly.
-    </p>
-    <div class="cta">
-      <a href="#contact" class="btn primary">Engage with CYBLICO</a>
-      <a href="#capabilities" class="btn secondary">Explore Capabilities</a>
+  <h1>AI Automation Systems for Growing Tech Businesses</h1>
+  <p>
+    We design and deploy intelligent systems that reduce manual workflows, improve operational speed, and scale with your business.
+  </p>
+  <div class="cta">
+    <a href="#contact" class="btn primary">Book an AI Strategy Call</a>
+    <a href="#services" class="btn secondary">Explore Capabilities</a>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section id="problems" class="alt">
+  <h2>Scaling Creates Operational Friction</h2>
+  <div class="grid">
+    <div class="card"><h3>Manual Workflows</h3><p>Repetitive tasks consuming team bandwidth.</p></div>
+    <div class="card"><h3>Disconnected Tools</h3><p>Data scattered across platforms with no automation layer.</p></div>
+    <div class="card"><h3>Rising Cloud Costs</h3><p>Infrastructure inefficiencies slowing growth.</p></div>
+    <div class="card"><h3>Slow Execution</h3><p>Approvals and processes blocking momentum.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>What We Build</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>AI Automation Systems</h3>
+      <p>Deploy intelligent agents that eliminate repetitive operational tasks.</p>
+    </div>
+    <div class="card">
+      <h3>Operational Architecture</h3>
+      <p>Redesign workflows to remove bottlenecks and increase execution speed.</p>
+    </div>
+    <div class="card">
+      <h3>Scalable Cloud Infrastructure</h3>
+      <p>Secure, cost-efficient systems built to support long-term growth.</p>
     </div>
   </div>
 </section>
 
-<section id="capabilities" class="alt">
-  <h2>What We Do</h2>
+<!-- PROCESS -->
+<section id="process" class="alt">
+  <h2>How We Work</h2>
   <div class="grid">
-    <div class="card"><h3>AI & Intelligent Systems</h3><p>Production-grade AI embedded into real business operations.</p></div>
-    <div class="card"><h3>Cloud & Platform Engineering</h3><p>Secure, scalable architectures across global cloud environments.</p></div>
-    <div class="card"><h3>Data, MLOps & Observability</h3><p>End-to-end systems that turn data into trusted intelligence.</p></div>
-    <div class="card"><h3>Digital Engineering</h3><p>Modern software platforms built for performance and longevity.</p></div>
+    <div class="card">
+      <h3>1. Audit</h3>
+      <p>Identify workflow inefficiencies and automation opportunities.</p>
+    </div>
+    <div class="card">
+      <h3>2. Architect</h3>
+      <p>Design AI-first systems aligned to measurable business outcomes.</p>
+    </div>
+    <div class="card">
+      <h3>3. Deploy & Optimise</h3>
+      <p>Implement production-ready solutions and continuously improve performance.</p>
+    </div>
   </div>
 </section>
 
-<section id="global">
-  <h2>Global Presence</h2>
+<!-- WHO WE WORK WITH -->
+<section>
+  <h2>Who We Work With</h2>
   <p>
-    Our clients operate across <strong>Dubai, India, USA, United Kingdom,
-    Australia, and Canada</strong>.
+    Funded startups · Scaling SaaS businesses · Mid-sized digital companies · Tech-enabled service firms
   </p>
-  <div class="quote">
-    “Our mission is simple: make AI accessible, responsible, and impactful
-    for organizations everywhere.”
-  </div>
 </section>
 
-<section id="about" class="alt">
-  <h2>More Than Systems. A Brand Built on Trust.</h2>
+<!-- FINAL CTA -->
+<section class="alt" id="contact">
+  <h2>Ready to Remove Operational Bottlenecks?</h2>
   <p>
-    CYBLICO builds long-term partnerships by engineering systems organizations
-    can rely on for years—not quarters.
+    Let’s design intelligent systems that support your next stage of growth.
   </p>
-  <div class="quote">
-    “Technology changes fast. Trust is built slowly.”
+  <div class="cta">
+    <a href="mailto:ops@cyblico.com" class="btn primary">Start the Conversation</a>
   </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📧 ops@cyblico.com<br>
-    📍 England, United Kingdom<br>
-    🌍 Global delivery · Remote-first
-  </p>
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div>
-      <h4>CYBLICO</h4>
-      <p>AI-First Cloud & Platform Engineering</p>
-    </div>
-    <div>
-      <h4>Global Reach</h4>
-      <p>UK · USA · India · Dubai · Australia · Canada</p>
-    </div>
-    <div>
-      <h4>© 2026</h4>
-      <p>CYBLICO LTD · All rights reserved</p>
-    </div>
-  </div>
+  CYBLICO LTD · England, United Kingdom · © 2026  
 </footer>
 
 </body>
